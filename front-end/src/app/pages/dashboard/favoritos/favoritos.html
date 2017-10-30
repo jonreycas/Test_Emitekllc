@@ -1,0 +1,18 @@
+<div class="favoritos-favoritos-container">
+  <div class="favoritos-favorito" *ngFor="let favorito of results" (click)="expandfavorito(favorito)">
+       <div class="favorito-icon" *ngIf="favorito.sexo == 'f'">
+          <img class="photo-icon" src="{{ ( favorito.sexo | baProfilePicture ) }}">
+        </div>
+        <div class="favorito-icon" *ngIf="favorito.sexo == 'm'">
+          <img class="photo-icon" src="assets/img/app/profile/m.png">
+          <span class="sub-photo-icon" [ngClass]="favorito.sexo"></span>
+        </div>
+    <div class="text-block text-favorito">
+      <div class="favorito-header">
+        <span class="author">{{ favorito.nombre }} </span>
+        <br>
+        <span class="author">{{ favorito.correo }} </span>
+      </div>
+    </div>
+  </div>
+</div>

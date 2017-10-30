@@ -1,0 +1,19 @@
+<div class="usuarios-usuarios-container">
+        <div class="usuarios-usuario" *ngFor="let usuario of results" (click)="expandusuario(usuario)">
+             <div class="usuario-icon" *ngIf="usuario.sexo == 'f'">
+                <img class="photo-icon" src="{{ ( usuario.sexo | baProfilePicture ) }}">
+              </div>
+              <div class="usuario-icon" *ngIf="usuario.sexo == 'm'">
+                <img class="photo-icon" src="assets/img/app/profile/m.png">
+                <span class="sub-photo-icon" [ngClass]="usuario.sexo"></span>
+              </div>
+          <div class="text-block text-usuario">
+            <div class="usuario-header">
+              <span class="author">{{ usuario.nombre }} </span>
+              <br>
+              <span class="author">{{ usuario.correo }} </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
